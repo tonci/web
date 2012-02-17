@@ -1,0 +1,13 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Our Catalog</h1>
+
+<% @products.each do |product| %>
+  <div class="entry">
+    <h3><%= product.title %></h3>
+    <%= sanitize product.description %>
+    <div class="price"><%= product.price %></div>
+  </div>
+<% end %>
